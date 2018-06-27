@@ -1,0 +1,29 @@
+#!/usr/bin/python
+
+from os import environ
+import SimpleHTTPServer
+import SocketServer
+
+PORT = 8081
+if "PSPDFKIT_BENCHMARK_PORT" in environ:
+  PORT = int(environ["PSPDFKIT_BENCHMARK_PORT"])
+
+Handler = SimpleHTTPServer.SimpleHTTPRequestHandler
+Handler.extensions_map.update({
+  '.wasm': 'application/wasm',
+});
+
+def do_POST(self):
+  content_len = int(self.headers.getheader('content-length', 0))
+  post_body = self.rfile.read(content_len)
+  with open('benchmark-result.json', 'w') as the_file:
+    the_file.write(post_body)
+  print "Wrote Benchmark result to benchmark-result.json"
+  httpd.server_close()
+
+Handler.do_POST = do_POST
+
+httpd = SocketServer.TCPServer(("", PORT), Handler)
+
+print "Serving Benchmark at http://localhost:{}".format(PORT)
+httpd.serve_forever()

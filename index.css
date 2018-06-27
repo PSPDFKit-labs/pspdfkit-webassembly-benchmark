@@ -1,0 +1,129 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #222;
+  margin: 0;
+  padding-bottom: 2rem;
+}
+
+@media (max-width: 1200px) {
+  body {
+    padding: 1rem;
+  }
+}
+
+a {
+  color: #035799;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+.Container {
+  margin-top: 2rem;
+}
+
+h3,
+summary {
+  font-size: 1.2em;
+}
+
+h1,
+h2,
+h3,
+summary {
+  font-weight: normal;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  line-height: 1;
+}
+
+p {
+  margin: 0.25em 0;
+}
+
+.App {
+  max-width: 1200px;
+  width: 100%;
+  margin: 1rem auto;
+}
+
+.Description {
+  margin: 2rem 0;
+}
+
+.Title {
+  margin-top: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #eee;
+}
+
+.Benchmarking {
+  margin: 1rem 0;
+}
+
+.Benchmarking span {
+  display: inline-block;
+  vertical-align: bottom;
+
+  overflow: hidden;
+  animation: benchmarking 0.65s linear infinite;
+}
+
+@keyframes benchmarking {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 30px;
+  }
+}
+
+.Result {
+  padding-bottom: 2rem;
+  margin: 1.5rem 0 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+.Switch {
+  padding: 1rem;
+  margin: 1rem 0;
+  background-color: #f0f0f0;
+  border: 1px solid #eee;
+  border-radius: 4px;
+}
+
+.RunCount {
+  margin: 2rem 0;
+}
+
+.FinalResult {
+  margin: 2rem 0;
+}
+
+.LoadTime {
+  width: 100%;
+  background-color: #f0f0f0;
+  margin-top: 2rem;
+}
+
+.LoadTime-bar {
+  height: 2rem;
+  background-color: orange;
+  margin-bottom: 1rem;
+}
+
+.IEWarn {
+  padding: 1rem;
+  margin: 1rem 0;
+  background-color: #feeeee;
+}
