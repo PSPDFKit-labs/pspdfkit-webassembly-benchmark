@@ -1,5 +1,5 @@
 // This function takes a `duration` and subtracts the time to load chunks
-// (WASM artifacts) which otherwise would influence the final benchmark
+// (Wasm artifacts) which otherwise would influence the final benchmark
 // result.
 const ignoredResourceRegex = /.*pspdfkit.w?asm.*/;
 export function cleanupMeasurement(duration) {
@@ -77,10 +77,10 @@ export function getConfigOptionsFromURL() {
   };
 }
 
-// The same WASM test that is used in PSPDFKit for Web
-export function isWASMSupported() {
+// The same Wasm test that is used in PSPDFKit for Web
+export function isWasmSupported() {
   try {
-    // iOS ~11.2.2 has a known WASM problem.
+    // iOS ~11.2.2 has a known Wasm problem.
     // See: https://github.com/kripken/emscripten/issues/6042
     if (
       /iPad|iPhone|iPod/.test(navigator.userAgent) &&

@@ -28,7 +28,7 @@ export default function Introduction({ isWasm }) {
         {isWasm && (
           <p>
             You’re running the WebAssembly Benchmark! For browsers that don’t
-            support WASM, we made a benchmark that runs a JavaScript version of
+            support Wasm, we made a benchmark that runs a JavaScript version of
             PSPDFKit for Web.
             {isWasm && (
               <React.Fragment>
