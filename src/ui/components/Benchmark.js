@@ -132,7 +132,7 @@ export default class Benchmark extends React.Component {
           data={tests["Test-Initialization"]}
           heading={
             isWasm
-              ? "Initialization: compilation and instantiation of the WASM module"
+              ? "Initialization: compilation and instantiation of the Wasm module"
               : "Initialization of PSPDFKit"
           }
           description={
@@ -188,7 +188,7 @@ export default class Benchmark extends React.Component {
               <div className="Result-score">
                 <div className="Score">
                   {isWasm && (
-                    <div className="Score-label">PSPDFKit WASM Score</div>
+                    <div className="Score-label">PSPDFKit Wasm Score</div>
                   )}
                   {!isWasm && (
                     <div className="Score-label">PSPDFKit JavaScript Score</div>

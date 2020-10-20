@@ -8,7 +8,7 @@
 
 A Benchmark for WebAssembly (Wasm, WA) that uses [PSPDFKit for Web](https://pspdfkit.com/web/) Standalone.
 
-The rendering engine of [PSPDFKit for Web](https://pspdfkit.com/web/) Standalone is written in C/C++ and compiled to WASM.
+The rendering engine of [PSPDFKit for Web](https://pspdfkit.com/web/) Standalone is written in C/C++ and compiled to Wasm.
 
 Get your score in the [live demo](http://iswebassemblyfastyet.com/) and learn more in our [blog post](https://pspdfkit.com/blog/2018/a-real-world-webassembly-benchmark/).
 
