@@ -63,22 +63,24 @@ render(state);
     );
     render(state);
 
-    window.ga(
-      "send",
-      "event",
-      "wasmbench",
-      "score",
-      state.isWasm ? "wasm-score" : "asmjs-score",
-      state.pspdfkitScore
-    );
-    window.ga(
-      "send",
-      "event",
-      "wasmbench",
-      "ratio",
-      state.isWasm ? "wasm-ratio" : "asmjs-ratio",
-      state.loadTimeInPspdfkitScore
-    );
+    if (window.ga) {
+      window.ga(
+        "send",
+        "event",
+        "wasmbench",
+        "score",
+        state.isWasm ? "wasm-score" : "asmjs-score",
+        state.pspdfkitScore
+      );
+      window.ga(
+        "send",
+        "event",
+        "wasmbench",
+        "ratio",
+        state.isWasm ? "wasm-ratio" : "asmjs-ratio",
+        state.loadTimeInPspdfkitScore
+      );
+    }
   } catch (e) {
     console.error(e);
     state.error = e;
