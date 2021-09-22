@@ -5,7 +5,7 @@ import {
   median,
 } from "./utils";
 
-export function createRunner(licenseKey) {
+export function createRunner() {
   let tests = {};
 
   // Register a benchmark to test
@@ -115,7 +115,6 @@ export function createRunner(licenseKey) {
       {
         pdf,
         headless: true,
-        licenseKey,
       },
       defaultConf,
       conf

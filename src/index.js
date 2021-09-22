@@ -26,17 +26,14 @@ render(state);
 (async function () {
   try {
     // Load the PDF and the license key.
-    const [pdf, licenseKey] = await Promise.all([
-      await fetch(PDF).then((r) => r.arrayBuffer()),
-      await fetch("./license-key").then((response) => response.text()),
-    ]);
+    const pdf = await fetch(PDF).then((r) => r.arrayBuffer())
+
 
     const { pspdfkitConfig } = getConfigOptionsFromURL();
 
-    const benchmark = createBenchmark(pdf, licenseKey, pspdfkitConfig);
+    const benchmark = createBenchmark(pdf, pspdfkitConfig);
 
     state.pdf = pdf;
-    state.licenseKey = licenseKey;
     state.isWasm = benchmark.isWasm;
     render(state);
 
